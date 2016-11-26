@@ -19,6 +19,7 @@ var app_component_1 = require('./../component/app.component');
 var usuario_component_1 = require('../../usuario/component/usuario.component');
 var home_component_1 = require('../../home/component/home.component');
 var perfil_component_1 = require('../../perfil/component/perfil.component');
+var perfil_component_form_1 = require('../../perfil/component/perfil.component.form');
 var routes_1 = require('../routes/routes');
 //adicione essa linha
 var http_1 = require('@angular/http');
@@ -37,7 +38,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 usuario_component_1.UsuarioComponent,
                 home_component_1.HomeComponent,
-                perfil_component_1.PerfilComponent
+                perfil_component_1.PerfilComponent,
+                perfil_component_form_1.PerfilComponentForm
             ],
             providers: [
                 usuario_service_1.UsuarioService,

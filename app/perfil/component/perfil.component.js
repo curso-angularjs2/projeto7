@@ -19,6 +19,12 @@ var PerfilComponent = (function () {
         this.perfilService.fetchAll()
             .subscribe(function (perfis) { return _this.perfis = perfis; }, function (error) { return _this.errorMessage = error; });
     };
+    PerfilComponent.prototype.deletar = function (id, i) {
+        var _this = this;
+        this.i = i;
+        this.perfilService.deletar(id)
+            .subscribe(function (success) { return _this.perfis.splice(_this.i, 1); }, function (error) { return _this.errorMessage = error; });
+    };
     PerfilComponent.prototype.ngOnInit = function () {
         this.getList();
     };

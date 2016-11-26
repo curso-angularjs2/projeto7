@@ -1,8 +1,11 @@
 <h2>Formulário de perfil</h2>
-<div class="form-group col-md-6">
+<div class="form-group col-md-12">
     <label>Nome</label>
     <input type="text" class="form-control" [(ngModel)]="perfil.nome"   />
 </div>
-<div class="form-group col-md-3">
+<div class="form-group col-md-1">
+    <a class="btn btn-default" routerLink="/perfil">Voltar</a>
+</div>
+<div class="form-group col-md-1">
     <button class="btn btn-primary" (click)="salvar(perfil)">Salvar</button>
 </div>

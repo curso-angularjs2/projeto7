@@ -11,6 +11,7 @@ import { AppComponent } from './../component/app.component';
 import { UsuarioComponent } from '../../usuario/component/usuario.component';
 import { HomeComponent } from '../../home/component/home.component';
 import { PerfilComponent } from '../../perfil/component/perfil.component';
+import { PerfilComponentForm } from '../../perfil/component/perfil.component.form';
 
 import { routing } from '../routes/routes';
 
@@ -29,7 +30,8 @@ import { HttpModule }    from '@angular/http';
         AppComponent,
         UsuarioComponent,
         HomeComponent,
-        PerfilComponent
+        PerfilComponent,
+        PerfilComponentForm
     ],
     providers:[
         UsuarioService,

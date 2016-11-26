@@ -1,4 +1,6 @@
 <h2>Lista de perfis</h2>
+<a class="btn btn-primary" routerLink="/perfil-add">Novo Perfil</a>  
+
 <table class="table">
     <tr>
         <th>
@@ -6,6 +8,12 @@
         </th>
         <th>
             Nome
+        </th>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th>
         </th>
     </tr>
 
@@ -16,5 +24,11 @@
         <td>
             {{perfil.nome}}
         </td>
+        <td>
+            <a class="btn btn-primary" routerLink="/perfil-edit/{{perfil._id}}">Editar</a>
+        </td>
+        <td>
+            <button class="btn btn-danger" (click)="deletar(perfil._id, i)">Deletar</button>
+        </td> 
     </tr>
 </table>

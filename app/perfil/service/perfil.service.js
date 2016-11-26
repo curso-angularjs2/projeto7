@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+var http_2 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
 var PerfilService = (function () {
     function PerfilService(http) {
@@ -20,6 +21,31 @@ var PerfilService = (function () {
         return this.http.get(this.perfilUrl)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
+    };
+    PerfilService.prototype.get = function (id) {
+        return this.http.get(this.perfilUrl + "/" + id)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError);
+    };
+    //método para salvar o Perfil
+    PerfilService.prototype.salvar = function (perfil) {
+        var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_2.RequestOptions({ headers: headers });
+        if (!perfil._id) {
+            return this.http.post(this.perfilUrl, perfil, options)
+                .map(function (res) { return res.json(); })
+                .catch(this.handleError);
+        }
+        else {
+            return this.http.put(this.perfilUrl + "/" + perfil._id, perfil, options)
+                .map(function (res) { return res.json(); })
+                .catch(this.handleError);
+        }
+    };
+    PerfilService.prototype.deletar = function (id) {
+        var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_2.RequestOptions({ headers: headers });
+        return this.http.delete(this.perfilUrl + "/" + id, options);
     };
     PerfilService.prototype.handleError = function (error) {
         var errMsg;

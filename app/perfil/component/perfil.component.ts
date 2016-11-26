@@ -10,6 +10,7 @@ import { PerfilService } from '../service/perfil.service';
 export class PerfilComponent implements OnInit {
     public perfis: Perfil[];
     errorMessage: string;
+    public i: number;
 
     constructor(private perfilService: PerfilService) { }
 
@@ -19,6 +20,14 @@ export class PerfilComponent implements OnInit {
             perfis => this.perfis = perfis,
             error => this.errorMessage = <any>error);
 
+    }
+
+    deletar(id, i) {
+        this.i = i;
+        this.perfilService.deletar(id)
+            .subscribe(
+            success => this.perfis.splice(this.i, 1),
+            error => this.errorMessage = <any>error);
     }
 
     ngOnInit(): void {
