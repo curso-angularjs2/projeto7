@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+//Services 
+import { UsuarioService } from '../../usuario/service/usuario.service';
+import { PerfilService } from '../../perfil/service/perfil.service';
+
+//Components
 import { AppComponent } from './../component/app.component';
 import { UsuarioComponent } from '../../usuario/component/usuario.component';
-import { UsuarioService } from '../../usuario/service/usuario.service';
 import { HomeComponent } from '../../home/component/home.component';
+import { PerfilComponent } from '../../perfil/component/perfil.component';
 
 import { routing } from '../routes/routes';
 
@@ -23,11 +28,12 @@ import { HttpModule }    from '@angular/http';
     declarations: [
         AppComponent,
         UsuarioComponent,
-        HomeComponent
+        HomeComponent,
+        PerfilComponent
     ],
     providers:[
-        UsuarioService
-        
+        UsuarioService,
+        PerfilService
     ],
     bootstrap: [AppComponent]
 })

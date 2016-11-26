@@ -11,10 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+//Services 
+var usuario_service_1 = require('../../usuario/service/usuario.service');
+var perfil_service_1 = require('../../perfil/service/perfil.service');
+//Components
 var app_component_1 = require('./../component/app.component');
 var usuario_component_1 = require('../../usuario/component/usuario.component');
-var usuario_service_1 = require('../../usuario/service/usuario.service');
 var home_component_1 = require('../../home/component/home.component');
+var perfil_component_1 = require('../../perfil/component/perfil.component');
 var routes_1 = require('../routes/routes');
 //adicione essa linha
 var http_1 = require('@angular/http');
@@ -32,10 +36,12 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 usuario_component_1.UsuarioComponent,
-                home_component_1.HomeComponent
+                home_component_1.HomeComponent,
+                perfil_component_1.PerfilComponent
             ],
             providers: [
-                usuario_service_1.UsuarioService
+                usuario_service_1.UsuarioService,
+                perfil_service_1.PerfilService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

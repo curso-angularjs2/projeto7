@@ -17,9 +17,7 @@ export class UsuarioComponent implements OnInit {
     private sub: any;
 
     constructor(private usuarioService: UsuarioService,
-        private route: ActivatedRoute) {
-
-    }
+        private route: ActivatedRoute) {}
 
     getListUsuarios(): void {
         this.usuarioService.getListUsuario()

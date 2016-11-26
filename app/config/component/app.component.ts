@@ -12,6 +12,7 @@ import './rxjs-operators';
                 <ul class="nav navbar-nav">
                   <li class="active"><a routerLink="/">Página inicial</a></li>
                   <li><a routerLink="/usuario">Usuários</a></li>
+                  <li><a routerLink="/perfil">Perfis</a></li>
                 </ul>
               </div>
             </nav>

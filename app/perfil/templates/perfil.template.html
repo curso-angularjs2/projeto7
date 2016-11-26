@@ -1,0 +1,20 @@
+<h2>Lista de perfis</h2>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Nome
+        </th>
+    </tr>
+
+    <tr *ngFor="let perfil of perfis; let i = index">
+        <td>
+            {{perfil._id}}
+        </td>
+        <td>
+            {{perfil.nome}}
+        </td>
+    </tr>
+</table>
