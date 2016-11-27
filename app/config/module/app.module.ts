@@ -13,9 +13,9 @@ import { HomeComponent } from '../../home/component/home.component';
 import { PerfilComponent } from '../../perfil/component/perfil.component';
 import { PerfilComponentForm } from '../../perfil/component/perfil.component.form';
 
+//adicione essa linha
 import { routing } from '../routes/routes';
 
-//adicione essa linha
 import { HttpModule }    from '@angular/http';
 
 @NgModule({
